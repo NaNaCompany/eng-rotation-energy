@@ -1,0 +1,43 @@
+{
+  "id": "E027",
+  "title": "회전 운동에너지 계산기",
+  "inputs_text": "지정 회전축의 질량관성모멘트 I [kg·m²], 각속도 ω [rad/s]",
+  "formula": "K_rot = I ω² / 2",
+  "output_text": "회전 운동에너지 K_rot [J]",
+  "assumptions": "I>0. 고정축 강체 회전이며 단면2차모멘트 m⁴와 혼동하지 않는다. rpm 입력은 rad/s로 변환한다. 병진 에너지는 포함하지 않는다.",
+  "purpose": "플라이휠 회전 에너지 계산 / 모터·회전체 검산",
+  "sources": [
+    {
+      "label": "OpenStax · Moment of Inertia and Rotational Kinetic Energy",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/10-4-moment-of-inertia-and-rotational-kinetic-energy"
+    }
+  ],
+  "slug": "eng-rotation-energy",
+  "category": "역학",
+  "result_label": "회전 운동에너지 K_rot",
+  "result_dimension": "energy",
+  "fields": [
+    {
+      "key": "i",
+      "label": "지정 회전축의 질량관성모멘트 I",
+      "dimension": "massInertia",
+      "example": 0.2,
+      "constraint": "positive",
+      "display_unit": "kgm2",
+      "display_value": "0.2"
+    },
+    {
+      "key": "omega",
+      "label": "각속도 ω",
+      "dimension": "angularSpeed",
+      "example": 10,
+      "constraint": "signed",
+      "display_unit": "rads",
+      "display_value": "10"
+    }
+  ],
+  "site": "https://nanalab.kr/eng-rotation-energy/",
+  "repository": "https://github.com/NaNaCompany/eng-rotation-energy",
+  "condition": "",
+  "output_unit": "J"
+}
